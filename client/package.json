@@ -1,10 +1,9 @@
 {
-  "name": "tourism-booking",
+  "name": "tourism-booking-client",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "node server/server.js",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -13,18 +12,10 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
     "axios": "^1.15.0",
-    "bcrypt": "^6.0.0",
-    "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "jsonwebtoken": "^9.0.3",
     "lucide-react": "^1.8.0",
-    "pg": "^8.20.0",
-    "pg-hstore": "^2.3.4",
     "react": "^19.2.5",
     "react-dom": "^19.2.4",
     "react-router-dom": "^7.14.1",
-    "sequelize": "^6.37.8",
     "tailwindcss": "^4.2.2"
   },
   "devDependencies": {

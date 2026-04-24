@@ -30,8 +30,8 @@ sequelize.authenticate()
     // Sync all models (creates tables if they don’t exist)
     await sequelize.sync({ alter: true });
     console.log("✅ All tables synced");
-
-    app.listen(process.env.PORT || 5000, () => {
+    const PORT = process.env.PORT || 5000;
+    app.listen(PORT,"0.0.0.0", () => {
       console.log(`🚀 Server running on port ${process.env.PORT || 5000}`);
     });
   })
