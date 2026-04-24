@@ -1,0 +1,59 @@
+@import "tailwindcss";
+main{
+  margin: 0;
+  font-family: sans-serif;
+  background: url("C:/Project/tourism booking/client/components/images/🇪🇹.jpg") no-repeat center center/cover;
+  min-height: 100vh;
+   display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.618);
+  
+}
+input {
+  width: 90% ;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: blue;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(0, 0, 255, 0.8);
+
+}
+h1 {
+
+  margin-bottom: 20px;
+  text-align: center;
+  
+}
+.link{
+  color: #2575fc;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: small;
+  text-align: center;
+}
+/* p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+} */
+
