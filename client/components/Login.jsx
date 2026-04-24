@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./index.css";
-
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000"; 
 export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
 
@@ -9,7 +9,7 @@ export default function Login() {
     e.preventDefault();
     
       try {
-        const res = await axios.post("http://localhost:5000/users/login", form, {
+        const res = await axios.post(`${API_URL}/users/login`, form, {
           headers: { "Content-Type": "application/json" },
         });
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import "./index.css";
-
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000"; 
 export default function Register() {
   const [form, setForm] = useState({ username: '', email: '', password: '' });
   const [error, setError] = useState('');
@@ -22,7 +22,7 @@ export default function Register() {
     return;
   }
     try{
-    await axios.post('http://localhost:5000/users/register', form);
+    await axios.post(`${API_URL}/users/register`, form);
     alert('Registered successfully!');
     window.location.href = "/login";
   } catch (err) {

@@ -13,7 +13,7 @@ import {
   ShieldCheck 
 } from "lucide-react";
 import AutoSlider from "./AutoSlider"; 
-
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000"; 
 const LandingPage = () => {
   const [destinations, setDestinations] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -35,7 +35,7 @@ const LandingPage = () => {
   useEffect(() => {
     const fetchTours = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/tours/");
+        const res = await axios.get(`${API_URL}/tours/`);
         setDestinations(res.data);
       } catch (err) {
         console.error("Error fetching tours:", err);

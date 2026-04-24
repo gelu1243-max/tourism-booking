@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Calendar, ArrowLeft, CheckCircle, Info } from "lucide-react";
-
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 const BookingPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ const BookingPage = () => {
 
   useEffect(() => {
     // Fetch destination details based on your tourRoutes.get("/:id")
-    axios.get(`http://localhost:5000/tours/${id}`)
+    axios.get(`${API_URL}/tours/${id}`)
       .then(res => setDestination(res.data))
       .catch(err => console.error(err));
   }, [id]);
@@ -41,7 +41,7 @@ const BookingPage = () => {
         userId: 1 // This is usually extracted from the token by your backend middleware
       };
 
-      await axios.post("http://localhost:5000/bookings", bookingData, {
+      await axios.post(`${API_URL}/bookings`, bookingData, {
         headers: { Authorization: `Bearer ${token}` }
       });
 

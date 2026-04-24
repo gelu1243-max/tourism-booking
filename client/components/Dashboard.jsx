@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Loader2, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom"; // Recommended way to navigate
-
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 const UserDashboard = () => {
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -19,7 +19,7 @@ const UserDashboard = () => {
           return;
         }
 
-        const res = await axios.get("http://localhost:5000/bookings/dashboard", {
+        const res = await axios.get(`${API_URL}/bookings/dashboard`, {
           headers: { Authorization: `Bearer ${token}` }
         });
 

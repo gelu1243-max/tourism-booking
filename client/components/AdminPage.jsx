@@ -4,7 +4,7 @@ import {
   PlusCircle, MapPin, DollarSign, ImageIcon, Search, Palmtree, 
   Globe, Trash2, Loader2, ArrowLeft, AlertCircle 
 } from "lucide-react";
-
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 const AdminPage = () => {
   const [destinations, setDestinations] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -14,7 +14,7 @@ const AdminPage = () => {
 
   const fetchDestinations = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/tours/");
+      const res = await axios.get(`${API_URL}/tours/`);
       setDestinations(res.data);
     } catch (err) {
       console.error("Error fetching destinations", err);
@@ -32,7 +32,7 @@ const AdminPage = () => {
     setLoading(true);
     try {
       const token = localStorage.getItem("token");
-      await axios.post("http://localhost:5000/tours/destination", form, {
+      await axios.post(`${API_URL}/tours/destination`, form, {
         headers: { Authorization: `Bearer ${token}` }
       });
       alert("Destination added!");
@@ -49,7 +49,7 @@ const AdminPage = () => {
     if (!window.confirm("Delete this tour?")) return;
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/tours/${id}`, {
+      await axios.delete(`${API_URL}/tours/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchDestinations();
