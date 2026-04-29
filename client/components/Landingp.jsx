@@ -179,7 +179,7 @@ const LandingPage = () => {
                 className="group bg-white rounded-[50px] shadow-2xl shadow-slate-200/60 overflow-hidden flex flex-col hover:-translate-y-6 transition-all duration-700 border border-slate-100"
               >
                 {/* LARGER IMAGE CONTAINER */}
-                <div className="relative h-[450px] w-full overflow-hidden">
+                <div className="relative h-[600px] w-full overflow-hidden">
                   <img 
                     src={dest.imageURL} 
                     alt={dest.name} 
