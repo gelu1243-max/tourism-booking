@@ -198,12 +198,8 @@ const LandingPage = () => {
 
                 {/* Content Area */}
                 <div className="p-12 flex flex-col flex-grow">
-                  <div className="flex items-center gap-2 text-blue-600 mb-4">
-                    <MapPin size={20} strokeWidth={3} />
-                    <span className="text-sm font-black uppercase tracking-widest">Ethiopia</span>
-                  </div>
                   
-                  <h3 className="text-4xl font-black text-slate-800 mb-6  group-hover:text-blue-600 transition-colors tracking-tight z-20">
+                  <h3 className="text-4xl font-black text-blue-600 mb-6 tracking-tight z-20">
                     {dest.name}
                   </h3>
                   
