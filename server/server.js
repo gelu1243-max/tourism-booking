@@ -12,6 +12,12 @@ import { User } from "./model/user.js";
 import  Destination  from "./model/destination.js";
 import Booking from "./model/booking.js";
 
+// Define associations
+User.hasMany(Booking, { foreignKey: 'userId' });
+Booking.belongsTo(User, { foreignKey: 'userId' });
+Destination.hasMany(Booking, { foreignKey: 'destinationId' });
+Booking.belongsTo(Destination, { foreignKey: 'destinationId' });
+
 dotenv.config();
 
 const app = express();
