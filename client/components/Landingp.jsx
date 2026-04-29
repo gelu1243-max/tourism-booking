@@ -138,7 +138,7 @@ const LandingPage = () => {
       <section className="relative h-[750px] w-full overflow-hidden bg-slate-900">
         <AutoSlider />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-slate-50 flex flex-col items-center justify-center text-white p-6 text-center z-10">
-          <h1 className="text-6xl md:text-[120px] font-black leading-none mb-6 drop-shadow-2xl tracking-tighter uppercase italic">
+          <h1 className="text-12xl md:text-14xl font-black leading-none mb-6 drop-shadow-2xl tracking-tighter uppercase italic">
             Discover <br/> <span className="text-blue-500">Ethiopia</span>
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl text-slate-200 font-medium leading-relaxed drop-shadow-lg">
