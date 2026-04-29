@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import "./dashboard.css";               
 const AutoSlider = () => {
-  const images = ["/components/landingimage/📍Sof Omar Caves, Ethiopia.jpg", 
-    "/components/landingimage/download (2).jpg",
-    "/components/landingimage/download (3).jpg",
-    "/components/landingimage/Erta Ale, Ethiopia - Unreal Volcanic Landscape in Ethiopia.jpg",
+  const images = ["/landingimage/📍Sof Omar Caves, Ethiopia.jpg", 
+    "/landingimage/download (2).jpg",
+    "/landingimage/download (3).jpg",
+    "/landingimage/Erta Ale, Ethiopia - Unreal Volcanic Landscape in Ethiopia.jpg",
     "/components/landingimage/The Danakil Depression, Ethiopia’s Fiery Frontier 🇪🇹.jpg"];
   const [index, setIndex] = useState(0);
 
