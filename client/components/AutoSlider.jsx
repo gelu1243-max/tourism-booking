@@ -5,7 +5,7 @@ const AutoSlider = () => {
     "/landingimage/download (2).jpg",
     "/landingimage/download (3).jpg",
     "/landingimage/Erta Ale, Ethiopia - Unreal Volcanic Landscape in Ethiopia.jpg",
-    "/components/landingimage/The Danakil Depression, Ethiopia’s Fiery Frontier 🇪🇹.jpg"];
+    "/landingimage/The Danakil Depression, Ethiopia’s Fiery Frontier 🇪🇹.jpg"];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
